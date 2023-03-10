@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+    <link rel="stylesheet" href="timerstyle.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>Your File is Ready</h1>
+		<p>Please wait while we prepare your download...</p>
+		<button class="download-btn" id="downloadBtn">Download now</button>
+		<div id="countdown"></div>
+	</div>
+
+	<script>
+		function startDownload() {
+			var countdownEl = document.getElementById("countdown");
+			var timeLeft = 5; // number of seconds for countdown
+			countdownEl.innerHTML = "Your file will be ready in" + timeLeft + " seconds.";
+
+			// start the countdown
+			var countdownTimer = setInterval(function() {
+				timeLeft--;
+				countdownEl.innerHTML = "Your file will be ready in " + timeLeft + " seconds.";
+
+				if (timeLeft == 0) {
+					clearInterval(countdownTimer);
+					window.open('https://bit.ly/3Jik3Xm', '_blank');
+				}
+			}, 1000);
+		}
+
+		// add event listener to button
+		var downloadBtn = document.getElementById("downloadBtn");
+		downloadBtn.addEventListener("click", function() {
+			startDownload();
+			downloadBtn.removeEventListener("click", arguments.callee);
+		});
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Background image example</title>
+	<style>
+		body {
+			background-image: url('https://wallpapercrafter.com/desktop/12383-clouds-porous-sunset-sky-horizon-twilight-moon-above-clouds-4k.jpg');
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+	</style>
+</head>
+<body>
+	<!-- Add your HTML content here -->
+</body>
+</html>
+

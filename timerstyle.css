@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        
+        .container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+        
+        .download-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+        
+        .download-btn:hover {
+            background-color: #3e8e41;
+        }
+        
+        #countdown {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>Your File is Ready</h1>
+		<p>Please wait while we prepare your download...</p>
+		<button class="download-btn" onclick="startDownload()">Download Now</button>
+		<div id="countdown"></div>
+	</div>
+
+	<script>
+		function startDownload() {
+			var countdownEl = document.getElementById("countdown");
+			var timeLeft = 5; // number of seconds for countdown
+			countdownEl.innerHTML = "Your download will start in " + timeLeft + " seconds.";
+
+			// start the countdown
+			var countdownTimer = setInterval(function() {
+				timeLeft--;
+				countdownEl.innerHTML = "Your download will start in " + timeLeft + " seconds.";
+
+				if (timeLeft == 0) {
+					clearInterval(countdownTimer);
+					window.open('https://bit.ly/3Jik3Xm', '_blank');
+				}
+			}, 1000);
+		}
+	</script>
+
+</body>
+</html>
