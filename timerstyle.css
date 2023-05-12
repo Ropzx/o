@@ -44,7 +44,7 @@
 	<div class="container">
 		<h1>Your File is Ready</h1>
 		<p>Please wait while we prepare your download...</p>
-		<button class="download-btn" onclick="startDownload()">Download Now</button>
+		<button class="download-btn" onclick="startDownload()">Click here</button>
 		<div id="countdown"></div>
 	</div>
 
@@ -52,16 +52,16 @@
 		function startDownload() {
 			var countdownEl = document.getElementById("countdown");
 			var timeLeft = 5; // number of seconds for countdown
-			countdownEl.innerHTML = "Your download will start in " + timeLeft + " seconds.";
+			countdownEl.innerHTML = "You will be redirected in " + timeLeft + " seconds.";
 
 			// start the countdown
 			var countdownTimer = setInterval(function() {
 				timeLeft--;
-				countdownEl.innerHTML = "Your download will start in " + timeLeft + " seconds.";
+				countdownEl.innerHTML = "You will be redirected in " + timeLeft + " seconds.";
 
 				if (timeLeft == 0) {
 					clearInterval(countdownTimer);
-					window.open('https://bit.ly/3Jik3Xm', '_blank');
+					window.open('https://linktr.ee/ropzx', '_blank');
 				}
 			}, 1000);
 		}
