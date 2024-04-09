@@ -9,7 +9,7 @@
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <form id="login-form" action="#">
+        <form id="login-form">
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -18,15 +18,12 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn">Login</button>
         </form>
     </div>
 
-    <script src="script.js"></script>
     <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // prevent the form from submitting
-
+        document.querySelector(".btn").addEventListener("click", function() {
             // Hardcoded username and password
             const username = "Ropz";
             const password = "password";
@@ -40,6 +37,8 @@
                 // Redirect to main page
                 window.location.href = "1secret_main1.html";
             } else {
+                // Clear password field
+                document.getElementById("password").value = "";
                 alert("Invalid username or password. Please try again.");
             }
         });
