@@ -34,6 +34,8 @@
 
             // Check if entered username and password match the hardcoded ones
             if (enteredUsername === username && enteredPassword === password) {
+                // Set a flag indicating successful login
+                localStorage.setItem("loggedIn", "true");
                 // Redirect to main page
                 window.location.href = "1secret_main1.html";
             } else {
@@ -41,6 +43,11 @@
                 document.getElementById("password").value = "";
                 alert("Invalid username or password. Please try again.");
             }
+        });
+
+        // Prevent form submission
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
         });
     </script>
 </body>
