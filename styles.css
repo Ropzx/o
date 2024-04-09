@@ -10,8 +10,8 @@ body {
 }
 
 .login-container {
-    width: 350px; /* Increased width */
-    padding: 20px;
+    width: 370px; /* Increased width */
+    padding: 30px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
