@@ -1,6 +1,6 @@
 // Hardcoded credentials (for demonstration purposes)
 const correctUsername = "admin";
-const correctPassword = "password123"; // Set your own password
+const correctPassword = "password13"; // Set your own password
 
 // Event listener for form submission
 document.getElementById("loginForm").addEventListener("submit", function(event) {
