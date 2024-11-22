@@ -1,4 +1,4 @@
-// Hardcoded credentials (you can change these values)
+// Hardcoded credentials
 const correctUsername = "admin";
 const correctPassword = "pass"; // Set to "pass" as per your request
 
