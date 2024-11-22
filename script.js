@@ -1,6 +1,6 @@
-// Hardcoded credentials
+// Hardcoded credentials (for demonstration purposes)
 const correctUsername = "admin";
-const correctPassword = "pass"; // Set to "pass" as per your request
+const correctPassword = "pass"; // Set your own password
 
 // Event listener for form submission
 document.getElementById("loginForm").addEventListener("submit", function(event) {
@@ -11,12 +11,12 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Check if the entered username and password match the hardcoded values
     if (username === correctUsername && password === correctPassword) {
-        // Set sessionStorage to indicate the user is logged in
+        // Store session data to track user login
         sessionStorage.setItem("loggedIn", "true");
-        // Redirect to o.html on success
+        // Redirect to o.html
         window.location.href = "o.html";
     } else {
-        // Display an error message on failure
+        // Show an error message if login is incorrect
         document.getElementById("error-message").innerText = "Invalid username or password!";
     }
 });
