@@ -4,44 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <div class="form-group">
-                <label for="username">username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="button" class="btn">Login</button>
+        <h2 id="greeting">Welcome!</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter Username" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
         </form>
+        <p id="error-message"></p>
     </div>
 
-    <script>
-        document.querySelector(".btn").addEventListener("click", function() {
-            // Hardcoded username and password
-            const username = "ropzx";
-            const password = "password123";
-
-            // Retrieve entered username and password
-            const enteredUsername = document.getElementById("username").value;
-            const enteredPassword = document.getElementById("password").value;
-
-            // Check if entered username and password match the hardcoded ones
-            if (enteredUsername === username && enteredPassword === password) {
-                // Redirect to main page
-                window.location.href = "1secret_main1.html";
-            } else {
-                // Clear password field
-                document.getElementById("password").value = "";
-                alert("Invalid username or password. Please try again.");
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
