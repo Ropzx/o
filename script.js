@@ -11,6 +11,8 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     // Check if the entered username and password match the hardcoded values
     if (username === correctUsername && password === correctPassword) {
+        // Set sessionStorage to indicate the user is logged in
+        sessionStorage.setItem("loggedIn", "true");
         // Redirect to o.html on success
         window.location.href = "o.html";
     } else {
